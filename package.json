@@ -1,0 +1,24 @@
+{
+  "name": "PRODAP_Desafio2_BackEnd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mviniciusgc/PRODAP_Desafio2_BackEnd.git",
+  "author": "Marcos Vinicius <mviniciusgc@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/typescript": "^2.0.0",
+    "jest": "^26.4.2",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.61",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "tsc":"tsc",
+    "dev:server":"tsnd -r tsconfig-paths/register --transpile-only --respawn --ignore-watch node_modules src/shared/infra/http/server.ts tsc",
+    "test": "jest"
+  }
+}
