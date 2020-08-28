@@ -1,6 +1,4 @@
-import { IPlanoCartesianoDTO } from "../infra/interfaces/dto/IPlanoCartesianoDTO";
-
-class PlanoCartesianoDTO implements IPlanoCartesianoDTO {
+class PlanoCartesianoDTO {
     public x1: number;
     public y1: number;
     public x2: number;

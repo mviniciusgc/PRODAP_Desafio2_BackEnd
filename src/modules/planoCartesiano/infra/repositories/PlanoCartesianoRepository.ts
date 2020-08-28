@@ -1,5 +1,4 @@
 import { IPlanoCartesianoRepository } from "../interfaces/repository/IPlanoCartesianoRepository";
-import { IPlanoCartesianoDTO } from "../interfaces/dto/IPlanoCartesianoDTO";
 
 class PlanoCartesianoRepository implements IPlanoCartesianoRepository {
 
@@ -8,8 +7,6 @@ class PlanoCartesianoRepository implements IPlanoCartesianoRepository {
     constructor() {
         this.distanciasCalculadas = [];
     }
-
-
 
     public async salvarDistanciaCalculada(total: number): Promise<number> {
 

@@ -1,6 +1,6 @@
 import { injectable, inject } from "tsyringe";
-import { IPlanoCartesianoDTO } from "../infra/interfaces/dto/IPlanoCartesianoDTO";
 import { IPlanoCartesianoRepository } from "../infra/interfaces/repository/IPlanoCartesianoRepository";
+import { PlanoCartesianoDTO } from "../dto/PlanoCartesianoDTO";
 
 @injectable()
 class CalcularDistanciaService {
@@ -10,7 +10,7 @@ class CalcularDistanciaService {
         private planoCartesianoRepository: IPlanoCartesianoRepository
     ) { }
 
-    public async execute(data: IPlanoCartesianoDTO): Promise<number> {
+    public async execute(data: PlanoCartesianoDTO): Promise<number> {
 
         const pontoA = Math.pow((data.x2 - data.x1),2);
         const pontoB =  Math.pow((data.y2 - data.y1),2);
