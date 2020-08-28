@@ -3,12 +3,18 @@ import { IPlanoCartesianoDTO } from "@modules/planoCartesiano/infra/interfaces/d
 
 class PlanoCartesianoRepository implements IPlanoCartesianoRepository {
 
+    private distanciasCalculadas: Array<number>;
 
-    public async salvarDistanciaCalculada(total: number): Promise<number> {
-        throw new Error("Method not implemented.");
+    constructor() {
+        this.distanciasCalculadas = [];
     }
 
-    
+    public async salvarDistanciaCalculada(total: number): Promise<number> {
+        this.distanciasCalculadas.push(total);
+        return total;
+    }
+
+
 }
 
 export { PlanoCartesianoRepository };

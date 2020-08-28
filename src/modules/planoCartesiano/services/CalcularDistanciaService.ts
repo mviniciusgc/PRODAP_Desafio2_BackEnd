@@ -12,11 +12,12 @@ class CalcularDistanciaService {
 
     public async execute(data: IPlanoCartesianoDTO): Promise<number> {
 
-        const equacao = ((data.x2 - data.x1) ^ 2 + (data.y2 - data.y1) ^ 2) / 2;
+        const pontoA = Math.pow((data.x2 - data.x1),2);
+        const pontoB =  Math.pow((data.y2 - data.y1),2);
 
-        let total = parseFloat((equacao.toFixed(4)));
+        const raizQuadradaEquacao = Math.sqrt((pontoA + pontoB));
 
-        total = Math.round(total * 100) / 100;
+        let total = parseFloat(raizQuadradaEquacao.toFixed(4));
 
         const valor = await this.planoCartesianoRepository.salvarDistanciaCalculada(total);
 
