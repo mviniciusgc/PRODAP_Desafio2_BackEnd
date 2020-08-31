@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { planoCartesianoRouter } from '@modules/planoCartesiano/infra/http/routes/PlanoCartesiano.route';
+import { cartesianPlaneRouter } from '@modules/cartesianPlane/infra/http/routes/CartesianPlane.route';
 
 const routes = Router();
 
-routes.use('/planoCartesiano', planoCartesianoRouter);
+routes.use('/cartesianPlane', cartesianPlaneRouter);
 
 export { routes };

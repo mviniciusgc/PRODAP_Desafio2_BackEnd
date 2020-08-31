@@ -1,4 +1,4 @@
-class PlanoCartesianoDTO {
+class CartesianPlaneDTO {
     public x1: number;
     public y1: number;
     public x2: number;
@@ -14,4 +14,4 @@ class PlanoCartesianoDTO {
 
 }
 
-export { PlanoCartesianoDTO };
+export { CartesianPlaneDTO };

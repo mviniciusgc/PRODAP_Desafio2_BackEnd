@@ -1,6 +1,6 @@
 import { container } from 'tsyringe';
 
-import { IPlanoCartesianoRepository } from '@modules/planoCartesiano/infra/interfaces/repository/IPlanoCartesianoRepository';
-import { PlanoCartesianoRepository } from '@modules/planoCartesiano/infra/repositories/PlanoCartesianoRepository';
+import { ICartesianPlaneRepository } from '@modules/cartesianPlane/infra/interfaces/repository/ICartesianPlaneRepository';
+import { CartesianPlaneRepository } from '@modules/cartesianPlane/infra/repositories/CartesianPlaneRepository';
 
-container.registerSingleton<IPlanoCartesianoRepository>('PlanoCartesianoRepository',PlanoCartesianoRepository);
+container.registerSingleton<ICartesianPlaneRepository>('CartesianPlaneRepository',CartesianPlaneRepository);
